@@ -1,6 +1,6 @@
 class Admin:
 
-    PASSWORD = "1234"
+    PASSWORD= "1234"
 
     @staticmethod
     def login():
