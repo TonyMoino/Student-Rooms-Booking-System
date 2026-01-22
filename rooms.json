@@ -1,0 +1,8 @@
+[
+    {
+        "room_id": 1,
+        "room_type": "SINGLE",
+        "price": 300.0,
+        "available": true
+    }
+]
