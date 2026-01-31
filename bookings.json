@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "student_id": 3445,
+        "room_id": 1
+    },
+    {
+        "student_id": 5667,
+        "room_id": 2
+    }
+]
