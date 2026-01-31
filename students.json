@@ -1,6 +1,16 @@
 [
-    {
-        "student_id": 3445,
-        "name": "MOINO"
-    }
+  {
+    "person_id": "S001",
+    "name": "Alice",
+    "role": "Student",
+    "active": true,
+    "password": "pass123"
+  },
+  {
+    "person_id": "S002",
+    "name": "Bob",
+    "role": "Student",
+    "active": true,
+    "password": "pass456"
+  }
 ]

@@ -1,18 +1,12 @@
+# -------------------------------
+# Room Class
+# -------------------------------
 class Room:
     def __init__(self, room_id, room_type, price, available=True):
         self.room_id = room_id
         self.room_type = room_type
         self.price = price
         self.available = available
-
-    def book(self):
-        if self.available:
-            self.available = False
-            return True
-        return False
-
-    def cancel(self):
-        self.available = True
 
     def display(self):
         status = "Available" if self.available else "Booked"
@@ -26,9 +20,9 @@ class Room:
             "available": self.available
         }
 
-    @staticmethod
-    def from_dict(data):
-        return Room(
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
             data["room_id"],
             data["room_type"],
             data["price"],

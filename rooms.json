@@ -3,6 +3,28 @@
         "room_id": 1,
         "room_type": "SINGLE",
         "price": 300.0,
+        "available": false
+    },
+    {
+        "room_id": 2,
+        "room_type": "double",
+        "price": 600.0,
+        "available": false
+    },
+    {
+        "room_id": 3,
+        "room_type": "SINGLE",
+        "price": 300.0,
+        "available": true
+    },
+    {
+        "room_id": 4,
+        "room_type": "SINGLE",
+        "price": 300.0,
         "available": true
     }
+
+
+
+
 ]
