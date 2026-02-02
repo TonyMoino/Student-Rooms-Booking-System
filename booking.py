@@ -1,20 +1,13 @@
-# -------------------------------
-# Booking Class
-# -------------------------------
 class Booking:
-    def __init__(self, student_id, room_id):
-        self.student_id = student_id
-        self.room_id = room_id
+    def __init__(self, student, room):
+        self.student = student
+        self.room = room
 
-    def display(self):
-        return f"Student {self.student_id} booked Room {self.room_id}"
+    def details(self):
+        return f"{self.student.name} booked Room {self.room.room_id}"
 
     def to_dict(self):
         return {
-            "student_id": self.student_id,
-            "room_id": self.room_id
+            "student_id": self.student.student_id,
+            "room_id": self.room.room_id
         }
-
-    @classmethod
-    def from_dict(cls, data):
-        return cls(data["student_id"], data["room_id"])
