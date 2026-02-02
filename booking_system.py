@@ -4,9 +4,7 @@ from student import Student
 from booking import Booking
 from admin import Admin
 
-# -------------------------------
-# Booking System Controller
-# -------------------------------
+
 class BookingSystem:
     def __init__(self):
         self.rooms = []
@@ -18,9 +16,7 @@ class BookingSystem:
         self.load_students()
         self.load_bookings()
 
-    # -------------------------------
-    # PROGRAM START
-    # -------------------------------
+
     def start(self):
         while True:
             print("\nWelcome to the Booking System")
@@ -51,9 +47,9 @@ class BookingSystem:
             else:
                 print("Invalid option.")
 
-    # -------------------------------
+
     # LOAD METHODS
-    # -------------------------------
+
     def load_rooms(self):
         try:
             with open("rooms.json", "r") as f:
@@ -75,9 +71,7 @@ class BookingSystem:
         except FileNotFoundError:
             self.bookings = []
 
-    # -------------------------------
-    # SAVE METHODS
-    # -------------------------------
+
     def save_rooms(self):
         with open("rooms.json", "w") as f:
             json.dump([r.to_dict() for r in self.rooms], f, indent=4)
@@ -90,9 +84,7 @@ class BookingSystem:
         with open("bookings.json", "w") as f:
             json.dump([b.to_dict() for b in self.bookings], f, indent=4)
 
-    # -------------------------------
-    # STUDENT LOGIN + MENU
-    # -------------------------------
+
     def student_login(self):
         print("\nStudent Login")
         temp_student = Student("", "", "")
@@ -147,9 +139,7 @@ class BookingSystem:
             else:
                 print("Invalid option.")
 
-    # -------------------------------
-    # ADMIN MENU
-    # -------------------------------
+
     def run_admin_menu(self):
         while True:
             print("\nADMIN MENU")
@@ -196,9 +186,7 @@ class BookingSystem:
             else:
                 print("Invalid option.")
 
-    # -------------------------------
-    # ADMIN VIEW METHODS
-    # -------------------------------
+
     def view_rooms(self):
         if not self.rooms:
             print("No rooms available.")
@@ -217,9 +205,7 @@ class BookingSystem:
         for b in self.bookings:
             print(b.display())
 
-    # -------------------------------
-    # ADMIN ACTION METHODS
-    # -------------------------------
+
     def add_student(self):
         sid = input("Student ID: ")
         name = input("Student Name: ")
