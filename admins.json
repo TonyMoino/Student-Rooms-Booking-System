@@ -1,0 +1,16 @@
+[
+    {
+        "person_id": "A001",
+        "name": "admin1",
+        "role": "Admin",
+        "active": true,
+        "password": "1234"
+    },
+    {
+        "person_id": "A002",
+        "name": "moino",
+        "role": "Admin",
+        "active": true,
+        "password": "3333"
+    }
+]
